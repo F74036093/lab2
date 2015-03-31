@@ -4,17 +4,17 @@ BMI::BMI(){
         height = 0;
         mass = 0;
     }
-BMI::void set_height(int height_f){
+void BMI::set_height(int height_f){
         height = (float)height_f;
     }
-BMI::void set_mass(int mass_f){
+void BMI::set_mass(int mass_f){
         mass = (float)mass_f;
     }
-BMI::float re_bmi(){
+float BMI::re_bmi(){
         bmi = mass/(height*height);
         return bmi;
     }
-BMI::string re_category(){
+string BMI::re_category(){
         if(bmi >= 40){
             return "Obese Class III (Very severely obese)";
         }else if(bmi >= 35){
