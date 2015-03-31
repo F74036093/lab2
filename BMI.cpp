@@ -11,7 +11,7 @@ void BMI::set_mass(int mass_f){
         mass = (float)mass_f;
     }
 float BMI::re_bmi(){
-        bmi = mass/(height*height);
+        bmi = mass/(height/100*height/100);
         return bmi;
     }
 string BMI::re_category(){

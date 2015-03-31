@@ -15,11 +15,14 @@ int main(int argc, const char * argv[]) {
     
     ifstream inFile("file.in", ios::in);
     ofstream outFile("file.out", ios::out);
-    if(!outFile || !inFile){
+    if(!inFile || !outFile){
         cerr<<"failed opening"<<endl;
         exit(1);
     }
         while(inFile>>h>>m){
+            if(h == 0){
+                break;
+            }
             func.set_height(h);
             func.set_mass(m);
             bmi = func.re_bmi();
